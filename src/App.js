@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import heroPic from "./images/FLEXSZN.jpeg";
 import MyHeader from './components/MyHeader';
 import MyFooter from './components/MyFooter';
+import FrontPage from './components/FrontPage';
 import {
   Box,
   Grommet,
@@ -34,9 +35,10 @@ function App() {
           <Box fill>
             <MyHeader />
             <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
-              <Box flex align="center" justify="center">
+              {/* <Box flex align="center" justify="center">
                 <Image fit="contain" src={heroPic} />
-              </Box>
+              </Box> */}
+              <FrontPage />
             </Box>
             <MyFooter />
           </Box>
