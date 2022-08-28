@@ -13,8 +13,8 @@ function MyFooter(props) {
   const footerLinks = [
     { icon: <Github />, href: "https://github.com/samuelalsup" },
     { icon: <Linkedin />, href: "https://www.linkedin.com/in/samuel-alsup-a184a1183/" },
-    { icon: <Instagram />, href: "https://www.twitter.com/sammmessi" },
-    { icon: <Twitter />, href: "https://www.instagram.com/samuelalsup_" },
+    { icon: <Instagram />, href: "https://www.instagram.com/samuelalsup_" },
+    { icon: <Twitter />, href: "https://www.twitter.com/sammmessi" },
   ];
 
   return (
