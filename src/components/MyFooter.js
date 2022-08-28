@@ -23,7 +23,7 @@ function MyFooter(props) {
         <Footer justify="around"
           background="background-front"
           direction={!["xsmall", "small"].includes(size) ? "row" : "column"}
-          align={!["xsmall", "small"].includes(size) ? "center" : undefined}
+          align="center"
           pad={{ horizontal: "medium", vertical: "small" }}
           fill="horizontal"
         >
