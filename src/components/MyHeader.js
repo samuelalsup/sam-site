@@ -10,13 +10,14 @@ import {
   IceCream,
   Moon,
 } from "grommet-icons";
+import { Link } from "react-router-dom";
 
 function MyHeader(props) {
   const items = [
-    { label: "Home", href: "https://www.google.com" },
-    { label: "About", href: "https://www.google.com" },
-    { label: "Skills + Experience", href: "https://www.google.com" },
-    { label: "Education", href: "https://www.google.com" },
+    { label: "Home", href: "https://www.google.com", url: "/" },
+    { label: "About", href: "https://www.google.com", url: "/about"},
+    { label: "Skills + Experience", href: "https://www.google.com", url:'/skills+exp' },
+    { label: "Education", href: "https://www.google.com", url: '/education' },
   ];
 
   return (
@@ -29,7 +30,7 @@ function MyHeader(props) {
           align="center"
         >
           <Button
-            href="https://www.google.com/"
+            href="/"
             icon={
               <IceCream
                 size="large"
@@ -44,7 +45,12 @@ function MyHeader(props) {
           {!["xsmall", "small"].includes(size) ? (
             <Nav direction="row" animation="fadeIn">
               {items.map((item) => (
-                <Button label={item.label} key={item.label} href={item.href} />
+                <Link to={item.url}>
+                <Button label={item.label} key={item.label} 
+                // href={item.href} 
+
+                />
+                </Link>
               ))}
             </Nav>
           ) : (

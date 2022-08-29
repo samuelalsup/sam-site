@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import heroPic from "./images/FLEXSZN.jpeg";
-import MyHeader from './components/MyHeader';
-import MyFooter from './components/MyFooter';
-import FrontPage from './components/FrontPage';
-import {
-  Box,
-  Grommet,
-  Image,
-  ResponsiveContext,
-} from "grommet";
-import {
-  CaretPrevious,
-} from "grommet-icons";
+import MyHeader from "./components/MyHeader";
+import MyFooter from "./components/MyFooter";
+import FrontPage from "./components/FrontPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutPage from "./components/AboutPage";
+import SkillsPage from "./components/SkillsPage";
+import EducationPage from "./components/EducationPage";
+import { Box, Grommet, Image, ResponsiveContext } from "grommet";
+import { CaretPrevious } from "grommet-icons";
+import HomePage from "./components/HomePage";
 
 const theme = {
   global: {
@@ -29,22 +27,15 @@ const theme = {
 function App() {
   // const [darkMode, setDarkMode] = useState(true);
   return (
-    <Grommet theme={theme} themeMode="dark" full>
-      <ResponsiveContext.Consumer>
-        {(size) => (
-          <Box fill>
-            <MyHeader />
-            <Box direction="row" flex overflow={{ horizontal: "hidden" }}>
-              {/* <Box flex align="center" justify="center">
-                <Image fit="contain" src={heroPic} />
-              </Box> */}
-              <FrontPage />
-            </Box>
-            <MyFooter />
-          </Box>
-        )}
-      </ResponsiveContext.Consumer>
-    </Grommet>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage theme={theme}/>} />
+        <Route path="about" element={<AboutPage theme={theme}/>} />
+        <Route path="skills+exp" element={<SkillsPage />} />
+        <Route path="education" element={<EducationPage />} />
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
