@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Header,
@@ -9,6 +9,7 @@ import {
 import {
   IceCream,
   Moon,
+  Sun,
 } from "grommet-icons";
 import { Link } from "react-router-dom";
 
@@ -19,12 +20,13 @@ function MyHeader(props) {
     { label: "Skills + Experience", href: "https://www.google.com", url:'/skills+exp' },
     { label: "Education", href: "https://www.google.com", url: '/education' },
   ];
+  const [mode, setMode] = useState(props.themeMode);
 
   return (
     <ResponsiveContext.Consumer>
       {(size) => (
         <Header
-          background="brand"
+          // background="brand"
           fill="horizontal"
           pad={{ left: "large", right: "small", vertical: "small" }}
           align="center"
@@ -41,6 +43,7 @@ function MyHeader(props) {
                 align="start"
               />
             }
+            label="Sam Alsup"
           />
           {!["xsmall", "small"].includes(size) ? (
             <Nav direction="row" animation="fadeIn">
@@ -54,9 +57,15 @@ function MyHeader(props) {
               ))}
             </Nav>
           ) : (
-            <Menu label="Menu" items={items} />
+            <Menu label="" items={items} />
           )}
-          <Button icon={<Moon />} />
+          {mode ? (<Button icon={<Moon />} onClick={() => {
+            props.switchDarkMode(); setMode(!mode);
+          }}/>) : (<Button icon={<Sun />} onClick={() => {
+            props.switchDarkMode(); setMode(!mode);
+          }}/>)
+          }
+          
         </Header>
       )}
     </ResponsiveContext.Consumer>

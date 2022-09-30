@@ -10,6 +10,7 @@ import EducationPage from "./components/EducationPage";
 import { Box, Grommet, Image, ResponsiveContext } from "grommet";
 import { CaretPrevious } from "grommet-icons";
 import HomePage from "./components/HomePage";
+import { grommet } from "grommet";
 
 const theme = {
   global: {
@@ -25,14 +26,17 @@ const theme = {
 };
 
 function App() {
-  // const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
+  function switchDarkMode () {
+    setDarkMode(!darkMode);
+  }
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage theme={theme}/>} />
-        <Route path="about" element={<AboutPage theme={theme}/>} />
-        <Route path="skills+exp" element={<SkillsPage />} />
-        <Route path="education" element={<EducationPage />} />
+        <Route path="/" element={<HomePage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
+        <Route path="about" element={<AboutPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
+        <Route path="skills+exp" element={<SkillsPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
+        <Route path="education" element={<EducationPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
       </Routes>
       
     </BrowserRouter>

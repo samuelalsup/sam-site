@@ -21,7 +21,7 @@ function MyFooter(props) {
     <ResponsiveContext.Consumer>
       {(size) => (
         <Footer justify="around"
-          background="background-front"
+          // background="background-front"
           direction={!["xsmall", "small"].includes(size) ? "row" : "column"}
           align="center"
           pad={{ horizontal: "medium", vertical: "small" }}
