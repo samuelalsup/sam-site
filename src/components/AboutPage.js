@@ -16,10 +16,8 @@ function AboutPage(props) {
                 <Image fit="contain" src={heroPic} />
               </Box> */}
               <PageHeader
-                title="About me!"
-                subtitle="Some info."
-                parent={<Anchor label="Parent Page" />}
-                actions={<Button label="View my resume" primary />}
+                title="Some things about me!"
+                subtitle="I have experience working on lots of languages! I've done frontend with React, as well as Python, C++, etc"
               />
             </Box>
             <MyFooter />

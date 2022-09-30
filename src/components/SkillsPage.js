@@ -16,10 +16,7 @@ function FrontPage(props) {
                 <Image fit="contain" src={heroPic} />
               </Box> */}
               <PageHeader
-                title="Hey, here are my skills"
-                subtitle="A computer."
-                parent={<Anchor label="Parent Page" />}
-                actions={<Button label="View my CV" primary />}
+                title="Here are some projects that I've worked on"
               />
             </Box>
             <MyFooter />

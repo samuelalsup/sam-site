@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
         <Route path="about" element={<AboutPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
-        <Route path="skills+exp" element={<SkillsPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
+        <Route path="projects" element={<SkillsPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
         <Route path="education" element={<EducationPage theme={grommet} themeMode={darkMode ? "dark" : "light" } switchDarkMode={switchDarkMode}/>} />
       </Routes>
       

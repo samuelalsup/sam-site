@@ -17,7 +17,7 @@ function MyHeader(props) {
   const items = [
     { label: "Home", href: "https://www.google.com", url: "/" },
     { label: "About", href: "https://www.google.com", url: "/about"},
-    { label: "Skills + Experience", href: "https://www.google.com", url:'/skills+exp' },
+    { label: "Skills + Experience", href: "https://www.google.com", url:'/projects' },
     { label: "Education", href: "https://www.google.com", url: '/education' },
   ];
   const [mode, setMode] = useState(props.themeMode);

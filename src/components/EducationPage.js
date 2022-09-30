@@ -16,11 +16,10 @@ function FrontPage(props) {
                 <Image fit="contain" src={heroPic} />
               </Box> */}
               <PageHeader
-                title="Info about UCLA"
+                title="UCLA"
                 subtitle="Maybe throw some blog stuff here. Also an idea is to have a sidebar with more options of smaller pages about my Spotify and other interests"
-                parent={<Anchor label="Parent Page" />}
-                actions={<Button label="View my CV" primary />}
               />
+              Here are the classes that I've taken over the years. I can honestly say that I enjoyed every single one (though not equally)
             </Box>
             <MyFooter />
           </Box>
